@@ -25,5 +25,8 @@ jobs:
     - name: 'Run main.go' # 步骤二，执行sh命令文件
       run: go run main.go
 
-    - name: 'get DATE' # 步骤二，执行sh命令文件
-      run: timedatectl && date
+    - name: 'get timedatectl' # 步骤二，执行sh命令文件
+      run: timedatectl
+
+    - name: 'get date' # 步骤二，执行sh命令文件
+      run: date
