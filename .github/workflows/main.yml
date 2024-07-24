@@ -7,15 +7,11 @@ on:
     - cron: '0 23 * * *'
 
 jobs:
-  my-job:
-    name: My Job
+  my-first-job:
+    name: my first job
     runs-on: ubuntu-latest
     steps:
-    - name: Print a greeting
-      env:
-        MY_VAR: Hi there! My name is
-        FIRST_NAME: Mona
-        MIDDLE_NAME: The
-        LAST_NAME: Octocat
-      run: |
-        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+    - name: checkout code
+      uses: actions/checkout@v2
+    - name: 'Run main.go' # 步骤二，执行sh命令文件
+      run: go main.go
